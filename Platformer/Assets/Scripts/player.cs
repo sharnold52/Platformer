@@ -28,6 +28,10 @@ public class player : MonoBehaviour {
     // reference to sky
     GameObject sky;
 
+    // respawn point of player
+    public float respawnX;
+    public float respawnY;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -42,6 +46,10 @@ public class player : MonoBehaviour {
 
         // get the parallax
         sky = GameObject.Find("Sky");
+
+        // get start position
+        respawnX = gameObject.GetComponent<Transform>().position.x;
+        respawnY = gameObject.GetComponent<Transform>().position.y;
 	}
 
 	// update
